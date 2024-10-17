@@ -14,8 +14,27 @@ Demonstrates how Temporal and GCP Vertex AI can be used to quickly build bulletp
 
 ## Running the samples
 
-For these sample, the optional `vertex` dependency group must be included. To include, run:
+First, you'll need to provide your GCP credentials as well as the project ID that you'll be working in.
 
-    poetry install --with vertex
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/neildahlke/.gcp/rick-1-389616-0b290d9dcbe3.json"
+export PROJECT_ID="foo-1-111111"
+```
 
-There are 3 Bedrock samples, see the README.md in each sub-directory for instructions on running each.
+Then, install the dependencies.
+
+```bash
+poetry install
+```
+
+Once the dependencies have been run, start the worker.
+
+```bash
+poetry run python run_worker.py
+```
+
+With the worker running, send a prompt.
+
+```bash
+poetry run python send_message.py "what is the capital of france?"
+```
