@@ -1,16 +1,11 @@
 import json
 
-# import boto3
-# from botocore.config import Config
 from temporalio import activity
-
-# config = Config(region_name="us-west-2")
 
 
 class VertexActivities:
     def __init__(self) -> None:
-        # self.vertex = boto3.client(service_name="vertex-runtime", config=config)
-        self.vertex = "Neil"
+        self.vertex = None
 
     @activity.defn
     def prompt_vertex(self, prompt: str) -> str:
@@ -41,4 +36,4 @@ class VertexActivities:
         return response_body.get("generation")
         """
 
-        return "GCP vertex repsponse"
+        return "GCP vertex response", self.vertex
