@@ -3,7 +3,7 @@ from datetime import timedelta
 from temporalio import workflow
 
 with workflow.unsafe.imports_passed_through():
-    from vertex.shared.activities import VertexActivities
+    from activities import VertexActivities
 
 
 @workflow.defn
@@ -12,6 +12,7 @@ class BasicVertexWorkflow:
     async def run(self, prompt: str) -> str:
 
         workflow.logger.info("Prompt: %s" % prompt)
+        print("Prompt: %s" % prompt)
 
         response = await workflow.execute_activity_method(
             VertexActivities.prompt_vertex,
@@ -22,3 +23,5 @@ class BasicVertexWorkflow:
         workflow.logger.info("Response: %s" % response)
 
         return response
+
+

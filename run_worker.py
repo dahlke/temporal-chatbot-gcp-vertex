@@ -4,9 +4,9 @@ import logging
 
 from temporalio.client import Client
 from temporalio.worker import Worker
-from vertex.basic.workflows import BasicVertexWorkflow
+from workflows import BasicVertexWorkflow
 
-from vertex.shared.activities import VertexActivities
+from activities import VertexActivities
 
 
 async def main():
