@@ -1,10 +1,13 @@
 [tool.poetry]
 name = "temporal-chatbot-gcp-vertex"
-version = "0.1.0"
+version = "0.1a1"
 description = "Demonstrates how Temporal and GCP Vertex AI can be used to quickly build bulletproof AI applications."
 authors = ["Neil Dahlke <neil.dahlke@temporal.io>"]
 license = "MIT"
 readme = "README.md"
+packages = [
+    { include = "**/*.py", from = "."  }
+]
 
 [tool.poetry.dependencies]
 python = "^3.12"

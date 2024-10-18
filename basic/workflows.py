@@ -3,8 +3,7 @@ from datetime import timedelta
 from temporalio import workflow
 
 with workflow.unsafe.imports_passed_through():
-    from activities import VertexActivities
-
+    from shared.activities import VertexActivities
 
 @workflow.defn
 class BasicVertexWorkflow:

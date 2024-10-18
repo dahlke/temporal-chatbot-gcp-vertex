@@ -6,7 +6,7 @@ from temporalio.client import Client
 from temporalio.worker import Worker
 from workflows import BasicVertexWorkflow
 
-from activities import VertexActivities
+from shared.activities import VertexActivities
 
 
 async def main():
