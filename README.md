@@ -4,7 +4,10 @@ Demonstrates how Temporal and GCP Vertex AI can be used to quickly build bulletp
 
 ## Samples
 
-* [basic](basic) - A basic Bedrock workflow to process a single prompt.
+* [basic](basic) - A basic Vertex AI workflow to process a single prompt.
+* [signals_and_queries](signals_and_queries) - Extension to the basic workflow to allow multiple prompts through signals & queries.
+* [entity](entity) - Full multi-Turn chat using an entity workflow..
+
 
 ## Pre-requisites
 
@@ -25,16 +28,4 @@ Then, install the dependencies.
 
 ```bash
 poetry install
-```
-
-Once the dependencies have been run, start the worker.
-
-```bash
-poetry run python run_worker.py
-```
-
-With the worker running, send a prompt.
-
-```bash
-poetry run python send_message.py "what is the capital of france?"
 ```
