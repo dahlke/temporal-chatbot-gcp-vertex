@@ -12,7 +12,7 @@ class VertexActivities:
 
     @activity.defn
     def prompt_vertex(self, prompt: str) -> str:
-        vertexai.init(project=PROJECT_ID, location="us-central1")
+        vertexai.init(project=PROJECT_ID, location=REGION)
 
         model = GenerativeModel("gemini-1.5-flash-002")
 
